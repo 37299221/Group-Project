@@ -1,0 +1,99 @@
+body {
+
+    color: #fff
+}
+
+/*General look of each of the choice containers, affecting how much screen is taken up, margins, text location, etc. */
+.choice-container {
+
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(18, 93, 255);
+    font-size: 3rem;
+    min-width: 80rem;
+}
+
+/*Containers change how they look (added glow / shadow to box when cursor hovers over)*/
+.choice-container:hover {
+
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+
+}
+
+/*NOT SURE*/
+.choice-prefix {
+
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+/*NOT SURE*/
+.choice-text {
+
+    padding: 2rem;
+    width: 100%;
+}
+
+/*Page background changes colour when a correct answer is clicked*/
+.correct {
+
+    background: linear-gradient(32deg, rgba(11, 233, 36) 0%, rgb(41, 232, 111) 100%);
+}
+
+/*Page background changes colour when an incorrect answer is clicked*/
+.incorrect {
+
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+
+/*Heads up Display */
+#hud {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/*'Question' text aligned to center + size change*/
+.hud-prefix {
+
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+
+    text-align: center;
+}
+
+/*Green bar empty + size and colour*/
+#progressBar {
+
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11,223,36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+/*Progreess bar full, fills with green*/
+#progressBarFull {
+
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+}
+
+/*Hides scrollbar on the side of the screen*/
+@media screen and (max-width: 768px) {
+
+    .choice-container {
+        min-width: 40rem;
+    }
+}
