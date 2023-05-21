@@ -1,0 +1,60 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["username"]))
+{
+  header("location:login.php");
+}
+
+?>
+
+
+
+<!-- HTML scaffolding start -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<!-- HTML scaffolding end -->
+
+    <title>Quiz World</title>
+
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+<!-- Buttons for seperate pages -->
+
+  <body>
+
+    <div class="container">
+
+
+      <div id="home" class="flex-center flex-column">
+       <h1>Welcome To Quiz World!</h1>
+        <h2>The Educational Quiz Application For All Your Needs</h2>
+
+        <h3>Logged in as : <?php echo $_SESSION["username"]; ?></h3>
+
+        <a class="btn" href="game.html">Play General Knowledge Quiz</a>
+        <a class="btn" href="##">Play Geography Quiz</a>
+        <a class="btn" href="##">Revision Flash Cards</a>
+        <a class="btn" href="highscores.html">High Scores</a>
+        <a class="btn" href="logout.php">Logout</a>
+
+<!-- Buttons for seperate pages -->
+
+      </div>
+    </div>
+  </body>
+</html>
+
+<?php 
+}else{
+     header("Location: loginpage.php");
+     exit();
+}
+ ?>
