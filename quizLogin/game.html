@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quick Quiz - Play</title>
+    
+    <!-- title of quiz with both stylesheet connected for game ccs-->
+    
+    <title>Quiz World!</title>
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/game.css" />
   </head>
+  
+  <!-- div containers for the loading bar and the progress text showing which question the user is on -->
+  
   <body>
     <div class="container">
       <div id="loader"></div>
@@ -30,6 +36,9 @@
             </h1>
           </div>
         </div>
+        
+        <!-- choice containers connecting javascript code to the API showing the loaded up questions -->
+        
         <h2 id="question"></h2>
         <div class="choice-container">
           <p class="choice-prefix">A</p>
@@ -49,6 +58,9 @@
         </div>
       </div>
     </div>
+    
+    <!-- connected javascript for game questions using API -->
+    
     <script src="js/game.js"></script>
   </body>
 </html>
